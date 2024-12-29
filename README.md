@@ -70,16 +70,15 @@ npm start
 
 1. Create Room
 Endpoint: `POST /api/rooms`
-**Request Body**:
+
+### **Request Body**:`JSON`
 ```bash
-JSON
 {
   "roomId": "unique_room_id"
 }
 ```
-**Response**:
+### **Response**:`JSON`
 ```bash
-JSON
 {
   "message": "Room created successfully",
   "roomId": "unique_room_id"
@@ -88,10 +87,9 @@ JSON
 
 2. List Active Rooms
 Endpoint: `GET /api/rooms`
-**Response**:
-```bash
-JSON
 
+### **Response**:`JSON`
+```bash
 [
   {
     "roomId": "room123",
@@ -102,9 +100,9 @@ JSON
 
 3. Delete Room
 Endpoint: `DELETE /api/rooms/:roomId`
-**Response**:
+
+### **Response** : `JSON`
 ```bash
-JSON
 {
   "message": "Room deleted successfully",
   "roomId": "room123"
