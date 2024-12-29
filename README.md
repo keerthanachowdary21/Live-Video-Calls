@@ -70,17 +70,16 @@ npm start
 
 1. Create Room
 Endpoint: `POST /api/rooms`
+**Request Body**:
 ```bash
-Request Body:
-json
-
+JSON
 {
   "roomId": "unique_room_id"
 }
 ```
-Response:
+**Response**:
 ```bash
-json
+JSON
 {
   "message": "Room created successfully",
   "roomId": "unique_room_id"
@@ -89,9 +88,9 @@ json
 
 2. List Active Rooms
 Endpoint: `GET /api/rooms`
-Response:
+**Response**:
 ```bash
-json
+JSON
 
 [
   {
@@ -103,7 +102,7 @@ json
 
 3. Delete Room
 Endpoint: `DELETE /api/rooms/:roomId`
-Response:
+**Response**:
 ```bash
 JSON
 {
@@ -113,7 +112,7 @@ JSON
 ```
 ---
 ## WebSocket Events
-On Connection: Logs new WebSocket connections.
-On Message: Broadcasts real-time updates to all connected clients about participant changes.
+ - On Connection: Logs new WebSocket connections.
+ - On Message: Broadcasts real-time updates to all connected clients about participant changes.
 
 
