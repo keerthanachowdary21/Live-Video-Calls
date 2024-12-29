@@ -47,8 +47,8 @@ This project is a backend service that integrates with the [100ms API](https://w
    ```bash
    git clone https://keerthanachowdary21/your-repository/Live-Video-Call.git
    cd Live-Video-Call
----
-
+   ```
+---   
 ## Environment Variables
 
 Create a `.env` file in the root directory and add the following:
@@ -58,4 +58,62 @@ PORT=5000
 WS_PORT=8080
 MONGO_URI=YOUR_MONGO_URL
 HMS_API_KEY=your_100ms_api_key
+```
 ---
+## Start the Application
+
+   ```bash
+npm start
+```
+---
+## API Endpoints
+
+1. Create Room
+Endpoint: `POST /api/rooms`
+```bash
+Request Body:
+json
+
+{
+  "roomId": "unique_room_id"
+}
+```
+Response:
+```bash
+json
+{
+  "message": "Room created successfully",
+  "roomId": "unique_room_id"
+}
+```
+
+2. List Active Rooms
+Endpoint: `GET /api/rooms`
+Response:
+```bash
+json
+
+[
+  {
+    "roomId": "room123",
+    "participants": 10
+  }
+]
+```
+
+3. Delete Room
+Endpoint: `DELETE /api/rooms/:roomId`
+Response:
+```bash
+JSON
+{
+  "message": "Room deleted successfully",
+  "roomId": "room123"
+}
+```
+---
+## WebSocket Events
+On Connection: Logs new WebSocket connections.
+On Message: Broadcasts real-time updates to all connected clients about participant changes.
+
+
