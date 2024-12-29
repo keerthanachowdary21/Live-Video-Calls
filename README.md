@@ -1,7 +1,7 @@
-API for Live Call Integration
+# API for Live Call Integration
 
 ## Description
-This project is a backend service designed to integrate with the [100ms API](https://www.100ms.live/docs) to manage live video calls. The service provides REST APIs for room management, token generation for participants, and real-time updates using WebSocket. It also stores room and participant details in a database for tracking purposes.
+This project is a backend service that integrates with the [100ms API](https://www.100ms.live/docs) to manage live video calls. The service provides REST APIs for room management, token generation for participants, and real-time updates using WebSocket. It also stores room and participant details in a database for tracking purposes.
 
 ---
 
@@ -50,22 +50,22 @@ This project is a backend service designed to integrate with the [100ms API](htt
 ---
 
 ## Install Dependencies
-
-```bash
-npm install
+   ```bash
+   npm install
 ---
 
 ## Environment Variables Create a .env file in the root directory and add the following:
 
-```bash
+   ```bash
 PORT=5000
 WS_PORT=8080
 MONGO_URI=YOUR_MONGO_URL
 HMS_API_KEY=your_100ms_api_key
----
-Start the Application
 
-```bash
+---
+## Start the Application
+
+   ```bash
 npm start
 ---
 
@@ -108,12 +108,13 @@ json
 Endpoint: `DELETE /api/rooms/:roomId`
 Response:
 ```bash
-json
+JSON
 {
   "message": "Room deleted successfully",
   "roomId": "room123"
 }
 ---
+
 ## WebSocket Events
 On Connection: Logs new WebSocket connections.
 On Message: Broadcasts real-time updates to all connected clients about participant changes.
