@@ -1,0 +1,21 @@
+### Create a Room
+POST http://localhost:5000/api/rooms
+Content-Type: application/json
+
+{
+  "roomId": "room123"
+}
+
+###
+
+### List All Rooms
+GET http://localhost:5000/api/rooms
+
+
+###
+
+### Delete a Room
+DELETE http://localhost:5000/api/rooms/room1
+
+###
+
